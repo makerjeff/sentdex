@@ -4,6 +4,7 @@
 - [OpenCV 3.0.0-dev documentation: Getting started with Videos](http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_gui/py_video_display/py_video_display.html): This is where Sentdex tutorials originate I think. (DO ME!)
 - [OpenCV Video Writer on Mac OS X: FourCC compressions that work ](https://gist.github.com/takuma7/44f9ecb028ff00e2132e) (IMPORTANT!)
 - [MatPlotLib Colors](http://matplotlib.org/examples/color/named_colors.html)
+- [PythonProgramming.net: Basics](https://pythonprogramming.net/python-3-loop-tutorial/?completed=/python-3-variables-tutorial/)
 
 
 #Google Python
