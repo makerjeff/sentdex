@@ -5,6 +5,7 @@
 - [OpenCV Video Writer on Mac OS X: FourCC compressions that work ](https://gist.github.com/takuma7/44f9ecb028ff00e2132e) (IMPORTANT!)
 - [MatPlotLib Colors](http://matplotlib.org/examples/color/named_colors.html)
 - [PythonProgramming.net: Basics](https://pythonprogramming.net/python-3-loop-tutorial/?completed=/python-3-variables-tutorial/)
+- [RPi OpenCV tutorial](http://rpihome.blogspot.com/2015/03/face-detection-with-raspberry-pi.html)
 
 
 #Google Python
