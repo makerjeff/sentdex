@@ -17,7 +17,7 @@ def ingestFakeStream(char):
 def main():
     while iterator < total_bytes:
         ingestFakeStream(file1.read(1))
-        time.sleep(0.01)
+        time.sleep(0.005)
 
 if __name__ == "__main__":
     main()
