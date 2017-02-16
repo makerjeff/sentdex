@@ -5,6 +5,7 @@
 - [OpenCV Video Writer on Mac OS X: FourCC compressions that work ](https://gist.github.com/takuma7/44f9ecb028ff00e2132e) (IMPORTANT!)
 - [MatPlotLib Colors](http://matplotlib.org/examples/color/named_colors.html)
 - [PythonProgramming.net: Basics](https://pythonprogramming.net/python-3-loop-tutorial/?completed=/python-3-variables-tutorial/)
+- [Python IO: Core tools for working with streams](https://docs.python.org/2/library/io.html)
 - [RPi OpenCV tutorial](http://rpihome.blogspot.com/2015/03/face-detection-with-raspberry-pi.html)
 
 
@@ -12,3 +13,6 @@
 - [Google Developers Python Introduction](https://developers.google.com/edu/python/introduction)
 - special variable "__name__" is equal to "__main__" when module is run directly.  Use this to check if it's an imported module.
 - [Google Developers Python Strings](https://developers.google.com/edu/python/strings)
+- file.tell() = gives position of file cursor.
+- file.seek(0, 0) = sets the cursor position.
+- file.readline() = reads up until \n (?)
