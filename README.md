@@ -6,7 +6,7 @@
 - [MatPlotLib Colors](http://matplotlib.org/examples/color/named_colors.html)
 - [PythonProgramming.net: Basics](https://pythonprogramming.net/python-3-loop-tutorial/?completed=/python-3-variables-tutorial/)
 - [Python IO: Core tools for working with streams](https://docs.python.org/2/library/io.html)
-- [Python ]
+- [Python_for_SS](http://www-rohan.sdsu.edu/~gawron/python_for_ss/course_core/book_draft/anatomy/files.html)
 - [Python: Difference between Text and Binary modes](http://stackoverflow.com/questions/9644110/difference-between-parsing-a-text-file-in-r-and-rb-mode/9644141#9644141)
 - [RPi OpenCV tutorial](http://rpihome.blogspot.com/2015/03/face-detection-with-raspberry-pi.html)
 

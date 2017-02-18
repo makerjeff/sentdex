@@ -1,3 +1,5 @@
+# TODO: FOCUS ON THIS TECHNIQUE FOR STREAMING IMAGES
+
 import time
 import os
 
