@@ -10,6 +10,7 @@
 - [Python: Difference between Text and Binary modes](http://stackoverflow.com/questions/9644110/difference-between-parsing-a-text-file-in-r-and-rb-mode/9644141#9644141)
 - [RPi OpenCV tutorial](http://rpihome.blogspot.com/2015/03/face-detection-with-raspberry-pi.html)
 - [Python OpenCV: Basic Image Manipulations](http://www.pyimagesearch.com/2014/01/20/basic-image-manipulations-in-python-and-opencv-resizing-scaling-rotating-and-cropping/) Scale, Rotate, etc.
+- [Picamera Module Documentation](http://picamera.readthedocs.io/en/release-1.12/recipes1.html): Picamera tutorials.
 
 
 #Google Python
