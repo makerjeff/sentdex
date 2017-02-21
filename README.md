@@ -11,7 +11,10 @@
 - [RPi OpenCV tutorial](http://rpihome.blogspot.com/2015/03/face-detection-with-raspberry-pi.html)
 - [Python OpenCV: Basic Image Manipulations](http://www.pyimagesearch.com/2014/01/20/basic-image-manipulations-in-python-and-opencv-resizing-scaling-rotating-and-cropping/) Scale, Rotate, etc.
 - [Picamera Module Documentation](http://picamera.readthedocs.io/en/release-1.12/recipes1.html): Picamera tutorials.
-
+- [Python BaseHTTPServer documentation](https://wiki.python.org/moin/BaseHttpServer)
+- [Python BareBones HTTP Server](https://daanlenaerts.com/blog/2015/06/03/create-a-simple-http-server-with-python-3/)
+- [Python Original (more advanced) HTTP Server](https://www.junian.net/2014/07/simple-http-server-and-client-in-python.html): This one parses a file-read on command and returns the data in the file. 
+- [Stack Overflow: Writing Image Files with Basic Python Server](http://stackoverflow.com/questions/28567733/how-to-encode-image-to-send-over-python-http-server): Also serves as an example for getting different routes.
 
 #Google Python
 - [Google Developers Python Introduction](https://developers.google.com/edu/python/introduction)
