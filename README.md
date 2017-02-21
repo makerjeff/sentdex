@@ -15,6 +15,7 @@
 - [Python BareBones HTTP Server](https://daanlenaerts.com/blog/2015/06/03/create-a-simple-http-server-with-python-3/)
 - [Python Original (more advanced) HTTP Server](https://www.junian.net/2014/07/simple-http-server-and-client-in-python.html): This one parses a file-read on command and returns the data in the file. 
 - [Stack Overflow: Writing Image Files with Basic Python Server](http://stackoverflow.com/questions/28567733/how-to-encode-image-to-send-over-python-http-server): Also serves as an example for getting different routes.
+- [How to relink OpenCV when it disappears](http://stackoverflow.com/questions/21140953/opencv-installed-but-not-linked-error-message-on-os-x-mavericks): Use 'brew link opencv3 --force'.
 
 #Google Python
 - [Google Developers Python Introduction](https://developers.google.com/edu/python/introduction)
