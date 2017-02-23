@@ -17,6 +17,9 @@
 - [Stack Overflow: Writing Image Files with Basic Python Server](http://stackoverflow.com/questions/28567733/how-to-encode-image-to-send-over-python-http-server): Also serves as an example for getting different routes.
 - [How to relink OpenCV when it disappears](http://stackoverflow.com/questions/21140953/opencv-installed-but-not-linked-error-message-on-os-x-mavericks): Use 'brew link opencv3 --force'.
 - [Setting OpenCV webcam resolutions](http://answers.opencv.org/question/34461/how-to-set-camera-resolution-webcam-with-opencv/): with cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+- [Flask: Python Web Framework](https://www.fullstackpython.com/flask.html) (USE ME! Required for Socket.io)
+- [Python Socket.IO](https://python-socketio.readthedocs.io/en/latest/) (USE ME!)
+- [OpenCV3.0.0-dev docs: Python Tutorials List](http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_table_of_contents_feature2d/py_table_of_contents_feature2d.html): Feature Detection and Description track.  DO ME.
 
 #Google Python
 - [Google Developers Python Introduction](https://developers.google.com/edu/python/introduction)
