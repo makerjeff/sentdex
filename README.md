@@ -23,6 +23,7 @@
 - [Python time.clock()](http://stackoverflow.com/questions/18169099/python-get-milliseconds-since-epoch-millisecond-accuracy-not-seconds1000): Use this for accurate benchmarking in python.
 - [Python OpenCV Face Recognition](http://hanzratech.in/2015/02/03/face-recognition-using-opencv.html)
 - [Python 'With' statement](http://effbot.org/zone/python-with-statement.htm)
+- [PiCamera: Read The Docs](https://picamera.readthedocs.io/en/release-1.12/recipes1.html): Includes a basic streaming tutorial.
 
 
 #Google Python
