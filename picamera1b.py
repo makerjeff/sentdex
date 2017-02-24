@@ -6,6 +6,7 @@ from picamera import PiCamera #OSX won't have this library
 camera = PiCamera()
 camera.resolution = (1024, 768)
 camera.vflip = True
+camera.hflip = True
 camera.annotate_text = 'herro wold.'
 
 
