@@ -24,6 +24,7 @@
 - [Python OpenCV Face Recognition](http://hanzratech.in/2015/02/03/face-recognition-using-opencv.html)
 - [Python 'With' statement](http://effbot.org/zone/python-with-statement.htm)
 - [**PiCamera Documentation**](https://picamera.readthedocs.io/en/release-1.12/recipes1.html): Includes a basic streaming tutorial.
+- [SimpleCV](http://simplecv.org/): A better CV library for Python?
 
 
 #Google Python
