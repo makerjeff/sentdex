@@ -79,6 +79,7 @@ class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
             self.wfile.write(photostream.read())
+            photostream.close()
             return
 
 
