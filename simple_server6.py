@@ -75,7 +75,7 @@ class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
             print 'attempting to capture photo and return'
             get_photo_from_pi()
             self.send_response(200)
-            self.send_header('Content-type','image')
+            self.send_header('Content-type','image/jpeg')
             self.end_headers()
 
             self.wfile.write(photostream.read())
