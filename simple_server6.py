@@ -98,7 +98,7 @@ def run():
     print 'Starting server...'
 
     #server settings
-    server_address = ('127.0.0.1', 3000)
+    server_address = ('192.168.1.101', 3000)
 
     httpd = HTTPServer(server_address, jwxHTTPRequestHandler)
     print 'Server is running.'
