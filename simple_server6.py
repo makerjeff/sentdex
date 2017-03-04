@@ -8,10 +8,12 @@ import random
 from picamera import PiCamera
 from io import BytesIO
 
-# create stream
-photostream = BytesIO()
+
 
 def get_photo_from_pi():
+    # create stream inside the function so we create a new one each time.
+    photostream = BytesIO()
+
     camera = PiCamera()
     camera.resolution = (640,480)
     camera.vflip = True
@@ -21,7 +23,8 @@ def get_photo_from_pi():
     camera.start_preview()
     sleep(2)
     camera.capture(photostream, format='jpeg', quality=15)
-    return
+
+    return photostream
 
 #HTTPRequestHandler class
 class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
@@ -78,8 +81,7 @@ class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type','image/jpeg')
             self.end_headers()
 
-            self.wfile.write(photostream.read())
-            photostream.close()
+            self.wfile.write(get_photo_from_pi().read())
             return
 
 
