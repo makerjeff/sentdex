@@ -32,6 +32,27 @@
     var button = document.getElementById('button');
 
     button.addEventListener('click', function(e){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/binary', true);
+        xhr.responseType = 'arraybuffer';
+
+        xhr.onload = function(e){
+
+            var arrayBufferView = new Uint8Array(e.response);
+            var blob = new Blob([arrayBufferView], {type: 'image/jpeg'});
+            var urlCreator = window.URL || window.webkitURL;
+            var imageUrl = urlCreator.createObjectURL(blob);
+
+            var img = document.createElement('img');
+            img.src = imageUrl;
+
+            resultDiv.appendChild(img);
+
+        };
+
+    });
+
+    function get_data_from_ajax() {
         $.ajax({
             method: 'GET',
             url: '/picamera',
@@ -44,9 +65,8 @@
                 resultDiv.appendChild(img);
             },
             error: function(err, status, jqxhr){}
-
         });
-    });
+    }
 
 </script>
 

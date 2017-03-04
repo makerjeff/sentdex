@@ -3,28 +3,36 @@
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from time import sleep
+from time import strftime
 import time
 import random
-from picamera import PiCamera
+# from picamera import PiCamera
 from io import BytesIO
 
+#define camera
+# camera = PiCamera()
+# camera.resolution = (640,480)
+# camera.vflip = True
+# camera.hflip = True
+# camera.annotate_text = strftime('%a, $d %b %Y %H:%M:%S')
 
 
 def get_photo_from_pi():
     # create stream inside the function so we create a new one each time.
     photostream = BytesIO()
 
-    camera = PiCamera()
-    camera.resolution = (640,480)
-    camera.vflip = True
-    camera.hflip = True
-    camera.annotate_text = 'From Pi'
-
     camera.start_preview()
     sleep(2)
     camera.capture(photostream, format='jpeg', quality=15)
 
-    return photostream
+    return photostream.read()
+
+def get_photo_from_local():
+    # file = open('images/cat_01.jpg', 'rb')
+    # return file.read()
+    with open('images/cat_01.jpg', 'rb') as f:
+        output = f.read()
+        return output
 
 #HTTPRequestHandler class
 class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
@@ -42,7 +50,7 @@ class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(200)
 
             #send headers
-            self.send_header('Content-type', 'text/html')
+            self.send_header('Content-type', 'text-html')
             self.end_headers()
 
             #message to send
@@ -67,7 +75,7 @@ class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
         elif self.path == '/index':
             print 'No delay, sending index file.'
             self.send_response(200)
-            self.send_header('Content-type', 'text/html')
+            self.send_header('Content-type', 'text-html')
             self.end_headers()
 
             file = open('public/index.html')
@@ -76,13 +84,27 @@ class jwxHTTPRequestHandler(BaseHTTPRequestHandler):
 
         elif self.path == '/picamera':
             print 'attempting to capture photo and return'
-            get_photo_from_pi()
+            # get_photo_from_pi()
             self.send_response(200)
-            self.send_header('Content-type','image/jpeg')
+            self.send_header('Content-type','image-jpeg')
             self.end_headers()
 
-            self.wfile.write(get_photo_from_pi().read())
+            self.wfile.write(get_photo_from_pi())
             return
+
+        # TODO: first see if it's the camera, or if it's the stream that's erroring.
+        elif self.path == '/binary':
+            self.send_response(200)
+            self.send_header('Content-type', 'image-jpeg')
+            self.end_headers()
+
+            #see if front-end can nab this binary data anyway
+            self.wfile.write(get_photo_from_local())
+            return
+
+
+
+
 
 
         else:
@@ -101,7 +123,8 @@ def run():
     print 'Starting server...'
 
     #server settings
-    server_address = ('192.168.1.101', 3000)
+    # server_address = ('192.168.1.101', 3000)  #pi
+    server_address = ('127.0.0.1', 3000)    #local
 
     httpd = HTTPServer(server_address, jwxHTTPRequestHandler)
     print 'Server is running.'
