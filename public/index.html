@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PiPhotoSnap</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .resultDiv {
+            width: 640px;
+            height: 480px;
+            background: rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body>
+
+<div id="container" class="container">
+    <div id="resultDiv" class="resultDiv"></div>
+    <button id="button" class="btn btn-info">get photo</button>
+</div>
+
+<script>
+    var resultDiv = document.getElementById('resultDiv');
+    var button = document.getElementById('button');
+
+    button.addEventListener('click', function(e){
+        $.ajax({
+            method: 'GET',
+            url: '/picamera',
+            success: function(data, status, jqxhr){
+                var img = new Image();
+                img.onload = function(){
+                    console.log('image file loaded.');
+                };
+                img.src = data;
+                resultDiv.appendChild(img);
+            },
+            error: function(err, status, jqxhr){}
+
+        });
+    });
+
+</script>
+
+</body>
+</html>

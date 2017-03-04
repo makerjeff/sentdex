@@ -26,6 +26,8 @@
 - [**PiCamera Documentation**](https://picamera.readthedocs.io/en/release-1.12/recipes1.html): Includes a basic streaming tutorial.
 - [SimpleCV](http://simplecv.org/): A better CV library for Python?
 - [Python Module of the Week: TCP/IP Client and Server](https://pymotw.com/2/socket/tcp.html)
+- [Python Time Module: strftime()](https://docs.python.org/2/library/time.html#time.strftime)
+    - Time string for Python: time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime())
 
 
 #Google Python
