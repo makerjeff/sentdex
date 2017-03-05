@@ -32,40 +32,29 @@
     var button = document.getElementById('button');
 
     button.addEventListener('click', function(e){
+        get_data_from_url();
+    });
+
+//  Works as expected.
+    function get_data_from_url() {
+        // clear resultDiv
+        resultDiv.innerHTML = '';
+
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/binary', true);
-        xhr.responseType = 'arraybuffer';
+        xhr.open('get', '/picamera');
+        xhr.responseType = 'blob';
 
         xhr.onload = function(e){
 
-            var arrayBufferView = new Uint8Array(e.response);
-            var blob = new Blob([arrayBufferView], {type: 'image/jpeg'});
-            var urlCreator = window.URL || window.webkitURL;
-            var imageUrl = urlCreator.createObjectURL(blob);
-
+            var blob = new Blob([xhr.response], {type: 'image/jpeg'});
             var img = document.createElement('img');
-            img.src = imageUrl;
+            img.id = 'image';
+            img.src = window.URL.createObjectURL(blob);
 
             resultDiv.appendChild(img);
 
         };
-
-    });
-
-    function get_data_from_ajax() {
-        $.ajax({
-            method: 'GET',
-            url: '/picamera',
-            success: function(data, status, jqxhr){
-                var img = new Image();
-                img.onload = function(){
-                    console.log('image file loaded.');
-                };
-                img.src = data;
-                resultDiv.appendChild(img);
-            },
-            error: function(err, status, jqxhr){}
-        });
+        xhr.send()
     }
 
 </script>

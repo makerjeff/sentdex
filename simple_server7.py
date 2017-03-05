@@ -6,22 +6,22 @@ from time import sleep
 from time import strftime
 import time
 import random
-# from picamera import PiCamera
+from picamera import PiCamera
 from io import BytesIO
 
-#define camera
-# camera = PiCamera()
-# camera.resolution = (640,480)
-# camera.vflip = True
-# camera.hflip = True
-# camera.annotate_text = strftime('%a, $d %b %Y %H:%M:%S')
+# define camera
+camera = PiCamera()
+camera.resolution = (640,480)
+camera.vflip = True
+camera.hflip = True
+camera.annotate_text = strftime('%a, $d %b %Y %H:%M:%S')
 
 cat_array = ['images/cat_01.jpg', 'images/cat_02.jpg', 'images/cat_03.jpg', 'images/cat_04.jpg']
 
+# TODO: make this work.
 def get_photo_from_pi():
     # create stream inside the function so we create a new one each time.
     photostream = BytesIO()
-
     camera.start_preview()
     sleep(2)
     camera.capture(photostream, format='jpeg', quality=15)
@@ -131,8 +131,8 @@ def run():
     print 'Starting server...'
 
     #server settings
-    # server_address = ('192.168.1.101', 3000)  #pi
-    server_address = ('127.0.0.1', 3000)    #local
+    server_address = ('192.168.1.101', 3000)  #pi
+    # server_address = ('127.0.0.1', 3000)    #local
 
     httpd = HTTPServer(server_address, jwxHTTPRequestHandler)
     print 'Server is running.'

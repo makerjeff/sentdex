@@ -37,3 +37,10 @@
 - file.tell() = gives position of file cursor.
 - file.seek(0, 0) = sets the cursor position.
 - file.readline() = reads up until \n (?)
+
+#Notes
+- Saving streams to file (should be able to snap from Pi Camera to stream, the send stream over interwebs to client.):
+    - Create stream object with io.BytesIO(open('filename.jpg', 'rb').read())
+    - Create file with file = open('destination_file_name.jpg', 'wb')
+    - Write stream buffer to file output with file.write(stream.read())
+    - Close output file to see the data, with file.close()
